@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "40a24574-7cbf-4b80-85c9-cca66f559c9a",
+		"name": "Cosmos",
+		"description": "A sample API that retrieves constellations as an example to demonstrate features in the OpenAPI 3.0 specification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "30669605-40a24574-7cbf-4b80-85c9-cca66f559c9a"
+	},
+	"item": [
+		{
+			"name": "cosmos",
+			"item": [
+				{
+					"name": "{cosmoId}",
+					"item": [
+						{
+							"name": "Info for a specific constellation",
+							"id": "6867547c-a7f9-43e6-9986-90f6e479ba7a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cosmos/:cosmoId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cosmos",
+										":cosmoId"
+									],
+									"variable": [
+										{
+											"id": "299279f2-cb5e-46ad-8f2c-730629693d89",
+											"key": "cosmoId",
+											"value": "<string>",
+											"description": "(Required) The id of the constellation to retrieve"
+										}
+									]
+								},
+								"description": "Returns a constellation based on a single ID"
+							},
+							"response": [
+								{
+									"id": "7885867f-b722-4c5e-818f-402c2d4f396a",
+									"name": "Expected response to a valid request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/cosmos/:cosmoId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cosmos",
+												":cosmoId"
+											],
+											"variable": [
+												{
+													"id": "299279f2-cb5e-46ad-8f2c-730629693d89",
+													"key": "cosmoId",
+													"value": "<string>",
+													"description": "(Required) The id of the constellation to retrieve"
+												}
+											]
+										},
+										"description": "Returns a constellation based on a single ID"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"tag\": \"<string>\",\n  \"description\": \"<string>\"\n}"
+								},
+								{
+									"id": "07adbb9a-d3c5-4b9c-8df4-f8840f2f3c27",
+									"name": "unexpected error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/cosmos/:cosmoId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cosmos",
+												":cosmoId"
+											],
+											"variable": [
+												{
+													"id": "299279f2-cb5e-46ad-8f2c-730629693d89",
+													"key": "cosmoId",
+													"value": "<string>",
+													"description": "(Required) The id of the constellation to retrieve"
+												}
+											]
+										},
+										"description": "Returns a constellation based on a single ID"
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "5d0776b6-0614-482f-8d53-17b37054e918"
+				},
+				{
+					"name": "List all cosmos",
+					"id": "dc09a609-3ea2-4da3-ac3e-fc93e35acd0a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/cosmos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cosmos"
+							]
+						},
+						"description": "Returns all constellations in this sample dataset"
+					},
+					"response": [
+						{
+							"id": "13445f5b-8d20-478f-abbd-620f70e42b57",
+							"name": "An array of constellations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cosmos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cosmos"
+									]
+								},
+								"description": "Returns all constellations in this sample dataset"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"id": "22668b24-0e21-44fe-bf19-cd723bff9143",
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cosmos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cosmos"
+									]
+								},
+								"description": "Returns all constellations in this sample dataset"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "d3a0b247-9898-4278-b0d1-4db2a9aa35ae"
+		}
+	],
+	"variable": [
+		{
+			"id": "6fd48184-bbc5-452e-84b4-9ae9f357ac35",
+			"key": "baseUrl",
+			"value": "https://2a6e0231-05f5-4028-8571-cbce1dcfb5b5.mock.pstmn.io"
+		}
+	]
+}
