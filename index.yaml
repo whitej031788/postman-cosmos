@@ -22,6 +22,10 @@ paths:
             Date:
               schema:
                 type: string
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+              description: Request limit per hour.
           content:
             application/json:
               schema:
